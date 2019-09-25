@@ -6,8 +6,6 @@ _Better error messages for Hapi.js Joi validation_
 [![Build Status][build-img]][build-url]
 [![Coverage Status][coverage-img]][coverage-url]
 
-[![Code Style][style-img]][style-url]
-
 ## Introduction
 
 [Joi](https://github.com/hapijs/joi) provides awesome schema validation, but the error messages returned are not user-friendly. This package returns a more user-friendly version of Joi's default response and allows for custom error messages.
