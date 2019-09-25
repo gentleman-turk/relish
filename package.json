@@ -1,32 +1,36 @@
 {
-  "name": "relish",
-  "version": "3.0.0",
-  "description": "Better error messages for Hapi.js Joi validation",
+  "name": "@condiments/relish",
+  "version": "4.0.0",
+  "description": "Better error messages for Hapi.js Joi validation. This is branched from dialexa/relish since that appears abandoned.",
   "main": "index.js",
   "scripts": {
-    "lint": "standard --verbose | snazzy",
-    "test": "npm run lint && lab -r console -v -t 100 -a code",
-    "test-ci": "standard && lab -r lcov -t 100 -a code | ./node_modules/.bin/coveralls",
+    "lint": "eslint ./",
+    "test": "npm run lint && lab -r console -v -t 100 -a @hapi/code",
+    "test-ci": "lab -r lcov -t 100 -a @hapi/code | ./node_modules/.bin/coveralls",
     "test-cov-html": "lab -r html -o coverage.html",
     "generate-docs": "node generate-docs.js",
     "version": "npm run generate-docs && git add README.md API.md",
     "postversion": "git push && git push --tags"
   },
   "engines": {
-    "node": ">= 8.9.0"
+    "node": ">= 12.10.0"
   },
   "peerDependencies": {
-    "hapi": ">= 17",
-    "joi": ">= 11"
+    "@hapi/hapi": ">=18",
+    "@hapi/joi": ">=16"
   },
-  "author": "Dialexa",
+  "author": "gentleman-turk",
   "contributors": [
+    "Robert Hernandez <rchernan9030@gmail.com>",
+    "Maciej Krüger <mkg20001@gmail.com>",
     "Andrew Turner <andrew@dialexa.com>"
   ],
   "license": "ISC",
   "keywords": [
     "hapi",
+    "@hapi/hapi",
     "joi",
+    "@hapi/joi",
     "error",
     "message",
     "error message",
@@ -37,20 +41,19 @@
     "joi error messages",
     "relish"
   ],
-  "repository": "git@github.com:dialexa/relish.git",
-  "homepage": "https://github.com/dialexa/relish",
-  "bugs": "https://github.com/dialexa/relish/issues",
+  "repository": "git@github.com:gentleman-turk/relish.git",
+  "homepage": "https://github.com/gentleman-turk/relish",
+  "bugs": "https://github.com/gentleman-turk/relish/issues",
   "dependencies": {
-    "hoek": "~5.0.3"
+    "@hapi/hoek": "~8.2.4"
   },
   "devDependencies": {
-    "code": "~5.2.0",
-    "coveralls": "~3.0.1",
-    "hapi": "~17.4.0",
-    "joi": "~13.2.0",
-    "lab": "~15.4.1",
-    "markdown-toc": "~1.2.0",
-    "snazzy": "~7.1.1",
-    "standard": "~11.0.1"
+    "@hapi/code": "~6.0.0",
+    "@hapi/hapi": "~18.4.0",
+    "@hapi/joi": "~16.0.1",
+    "@hapi/lab": "~20.2.2",
+    "coveralls": "~3.0.6",
+    "eslint": "~6.4.0",
+    "markdown-toc": "~1.2.0"
   }
 }
