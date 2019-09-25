@@ -130,8 +130,8 @@ See the [API Documentation](https://github.com/gentleman-turk/relish/blob/v4.0.0
 [build-url]:https://travis-ci.org/gentleman-turk/relish
 [coverage-img]:https://coveralls.io/repos/gentleman-turk/relish/badge.svg?branch=master&service=github
 [coverage-url]:https://coveralls.io/github/gentleman-turk/relish?branch=master
-[version-img]:https://badge.fury.io/js/relish.svg
-[version-url]:https://badge.fury.io/js/relish
+[version-img]:https://badge.fury.io/js/%40condiments%2Frelish.svg
+[version-url]:https://badge.fury.io/js/%40condiments%2Frelish
 [style-img]:https://cdn.rawgit.com/feross/standard/master/badge.svg
 [style-url]:http://standardjs.com/
 [hapi-route-options]:http://hapijs.com/api#route-options
