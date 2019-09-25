@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-const Hapi = require('@hapi/hapi')
-const Joi = require('@hapi/joi')
+const Hapi = require('@hapi/hapi');
+const Joi = require('@hapi/joi');
 const Relish = require('../')({
   messages: {
     timestamp: 'This request requires a timestamp',
@@ -10,7 +10,7 @@ const Relish = require('../')({
     'data.name': 'Please give us your name',
     'data.phone': 'Please give us your name'
   }
-})
+});
 
 const server = Hapi.Server({
   host: '0.0.0.0',
@@ -24,7 +24,7 @@ const server = Hapi.Server({
       }
     }
   }
-})
+});
 
 server.route({
   method: 'POST',
@@ -43,11 +43,11 @@ server.route({
     }
   },
   handler: (request, h) => h.response()
-})
+});
 
 const init = async () => {
-  await server.start()
-  console.log(`Server is running at ${server.info.uri}`)
-}
+  await server.start();
+  console.log(`Server is running at ${server.info.uri}`);
+};
 
-init()
+init();

@@ -23,8 +23,8 @@ Code or documentation changes are welcome and should follow the guidelines below
   * Make sure your branch is up to date with the upstream repository (if not, perform a downstream merge and resolve any merge conflicts)
 
 <!-- URLs -->
-[new-issue]:https://github.com/dialexa/relish/issues/new
-[new-pull-request]:https://github.com/dialexa/relish/pull/new/master
-[help-wanted]:https://github.com/dialexa/relish/labels/help%20wanted
+[new-issue]:https://github.com/gentleman-turk/relish/issues/new
+[new-pull-request]:https://github.com/gentleman-turk/relish/pull/new/master
+[help-wanted]:https://github.com/gentleman-turk/relish/labels/help%20wanted
 [working-with-forks]:http://help.github.com/articles/working-with-forks/
 [js-standard-rules]:http://standardjs.com/rules.html

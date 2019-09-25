@@ -1,17 +1,17 @@
-'use strict'
+'use strict';
 
-const Hoek = require('@hapi/hoek')
+const Hoek = require('@hapi/hoek');
 
-const internals = {}
+const internals = {};
 
 internals.defaults = {
   stripQuotes: false,
   messages: {}
-}
+};
 
 const Relish = function Relish (opts) {
-  this.exports = {}
-  this._opts = opts ? Hoek.applyToDefaults(internals.defaults, opts) : internals.defaults
+  this.exports = {};
+  this._opts = opts ? Hoek.applyToDefaults(internals.defaults, opts) : internals.defaults;
 
   this.parseError = (error) => {
     return error.details.map((i) => {
@@ -21,58 +21,58 @@ const Relish = function Relish (opts) {
         message: this._opts.stripQuotes ? i.message.replace(/"/g, '') : i.message,
         type: i.type.split('.').shift(),
         constraint: i.type.split('.').pop()
-      }
+      };
 
       // if label is different than key, provide label
       if (i.context.label !== err.key) {
-        err.label = i.context.label
+        err.label = i.context.label;
       }
 
       // set custom message (if exists)
       if (Object.prototype.hasOwnProperty.call(this._opts.messages, err.path)) {
-        err.message = this._opts.messages[err.path]
+        err.message = this._opts.messages[err.path];
       } else if (Object.prototype.hasOwnProperty.call(this._opts.messages, err.key)) {
-        err.message = this._opts.messages[err.key]
+        err.message = this._opts.messages[err.key];
       }
 
-      return err
-    })
-  }
+      return err;
+    });
+  };
 
   this.formatResponse = (error, source, errorMessage, errors) => {
     // append errors array to response
-    error.output.payload.message = errorMessage
+    error.output.payload.message = errorMessage;
     error.output.payload.validation = {
       source: source,
       errors: errors
-    }
+    };
 
-    return error
-  }
+    return error;
+  };
 
   this.exports.options = (opts) => {
-    this._opts = Hoek.applyToDefaults(this._opts, opts)
+    this._opts = Hoek.applyToDefaults(this._opts, opts);
 
-    return this.exports
-  }
+    return this.exports;
+  };
 
   this.exports.failAction = (request, h, err) => {
     // parse error object
-    const errors = this.parseError(err)
+    const errors = this.parseError(err);
 
     // build main error message
-    const errorMessage = errors.map((e) => e.message).join(', ')
+    const errorMessage = errors.map((e) => e.message).join(', ');
 
     // retrieve validation failure source
-    const source = err.output.payload.validation.source
+    const source = err.output.payload.validation.source;
 
     // format error response
-    err = this.formatResponse(err, source, errorMessage, errors)
+    err = this.formatResponse(err, source, errorMessage, errors);
 
-    return err
-  }
+    return err;
+  };
 
-  return this.exports
-}
+  return this.exports;
+};
 
-module.exports = (opts) => new Relish(opts)
+module.exports = (opts) => new Relish(opts);

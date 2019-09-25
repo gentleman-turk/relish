@@ -121,14 +121,14 @@ Relish Version | Hapi Version      | Joi Version
 3.x            | >= 17.x           | >= 11.x
 
 ## API Documentation
-See the [API Documentation](https://github.com/dialexa/relish/blob/v3.0.0/API.md) for reference.
+See the [API Documentation](https://github.com/gentleman-turk/relish/blob/v4.0.0/API.md) for reference.
 
 <!-- Badge URLs -->
 [logo]:images/relish.png
-[build-img]:https://travis-ci.org/dialexa/relish.svg?branch=master
-[build-url]:https://travis-ci.org/dialexa/relish
-[coverage-img]:https://coveralls.io/repos/dialexa/relish/badge.svg?branch=master&service=github
-[coverage-url]:https://coveralls.io/github/dialexa/relish?branch=master
+[build-img]:https://travis-ci.org/gentleman-turk/relish.svg?branch=master
+[build-url]:https://travis-ci.org/gentleman-turk/relish
+[coverage-img]:https://coveralls.io/repos/gentleman-turk/relish/badge.svg?branch=master&service=github
+[coverage-url]:https://coveralls.io/github/gentleman-turk/relish?branch=master
 [version-img]:https://badge.fury.io/js/relish.svg
 [version-url]:https://badge.fury.io/js/relish
 [style-img]:https://cdn.rawgit.com/feross/standard/master/badge.svg
