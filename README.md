@@ -123,7 +123,7 @@ Relish Version | Hapi Version      | Joi Version
 5.x            | >= 20.x           | >= 17.x
 
 ## API Documentation
-See the [API Documentation](https://github.com/gentleman-turk/relish/blob/v5.0.0/API.md) for reference.
+See the [API Documentation](https://github.com/gentleman-turk/relish/blob/v5.0.1/API.md) for reference.
 
 <!-- Badge URLs -->
 [logo]:images/relish.png
