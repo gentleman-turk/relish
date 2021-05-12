@@ -1,5 +1,5 @@
 <!-- version -->
-API Documentation - `v4.0.0`
+API Documentation - `v5.0.0`
 ---
 <!-- versionstop -->
 
@@ -49,4 +49,4 @@ const failAction = Relish.options({
 A helper function that can be used as a custom failAction handler in your Hapi.js [Route Options][hapi-route-options].
 
 <!-- URLs -->
-[hapi-route-options]:http://hapijs.com/api#route-options
+[hapi-route-options]:https://hapi.dev/api/?v=20.1.2#route-options

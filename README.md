@@ -8,7 +8,7 @@ _Better error messages for Hapi.js Joi validation_
 
 ## Introduction
 
-[Joi](https://github.com/hapijs/joi) provides awesome schema validation, but the error messages returned are not user-friendly. This package returns a more user-friendly version of Joi's default response and allows for custom error messages.
+[Joi](https://github.com/sideway/joi) provides awesome schema validation, but the error messages returned are not user-friendly. This package returns a more user-friendly version of Joi's default response and allows for custom error messages.
 
 This is taken from the original Relish package which appears to be abandoned.
 
@@ -120,9 +120,10 @@ Relish Version | Hapi Version      | Joi Version
 2.x            | >= 16.6.1, < 17.x | >= 11.x
 3.x            | >= 17.x           | >= 11.x
 4.x            | >= 18.x           | >= 16.x
+5.x            | >= 20.x           | >= 17.x
 
 ## API Documentation
-See the [API Documentation](https://github.com/gentleman-turk/relish/blob/v4.0.1/API.md) for reference.
+See the [API Documentation](https://github.com/gentleman-turk/relish/blob/v5.0.0/API.md) for reference.
 
 <!-- Badge URLs -->
 [logo]:images/relish.png
@@ -134,4 +135,4 @@ See the [API Documentation](https://github.com/gentleman-turk/relish/blob/v4.0.1
 [version-url]:https://badge.fury.io/js/%40condiments%2Frelish
 [style-img]:https://cdn.rawgit.com/feross/standard/master/badge.svg
 [style-url]:http://standardjs.com/
-[hapi-route-options]:http://hapijs.com/api#route-options
+[hapi-route-options]:https://hapi.dev/api/?v=20.1.2#route-options
