@@ -1,6 +1,6 @@
 {
   "name": "@condiments/relish",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Better error messages for Hapi.js Joi validation. This is branched from dialexa/relish since that appears abandoned.",
   "main": "index.js",
   "scripts": {
